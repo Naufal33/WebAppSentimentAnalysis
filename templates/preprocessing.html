@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block body %}
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Data Preprocessing</h1>
+    </div>
+    <h2>Pengumpulan Data</h2>
+    <p>
+        Pada tahap ini dilakukan pengumpulan data twitter terlebih dahulu. Sebelum data dicrawling, diperlukan access token agar data dapat diakses. Access token tersebut dapat diperoleh dengan mendaftarkan akun Twitter Developer pada laman https://developer.twitter.com/en. Setelah access token  diperoleh, data dapat diambil menggunakan library tweepy dengan query ‘PPKM’ menggunakan bahasa pemrograman Python.
+    </p>
+    <h2>Case Folding</h2>
+    <p>Tahap ini huruf  kapital pada data tweet di ubah menjadi huruf  tidak kapital. Hal ini bertujuan untuk mengurangi redudansi data yang hanya berbeda pada huruf  kapitalnya saja.</p>
+    <img src="static/assets/1.png" alt="">
+    <h2>Data Cleansing </h2>
+    <p>Pada tahap ini dilakukan pembersihan kata yang tidak berpengaruh terhadap proses klasifikasi. Pada data tweet terdapat beberapa bagian yang dapat dihilangkan seperti mention yang diawali dengan atribut ‘@’, hashtag yang diawali dengan ‘#’, link yang biasanya diawali dengan kata ‘https://’, serta simbol-simbol seperti (~!@#$%?:"). Atribut tersebut dapat dihilangkan menggunakan algoritma dan digantikan dengan karakter spasi.</p>
+    <img src="static/assets/3.png" alt="">
+    <h2>Menghilangankan Stopword</h2>
+    <p>Pada tahap ini kata – kata yang tidak sesuai dan tidak penting dihapus karena tidak berpengaruh pada topik. Kata yang tidak sasuai dengan topik pada dokumen dan kata tersebut tidak berpengaruh terhadap akurasi dalam klasifikasi sentiment.</p>
+    <img src="static/assets/2.png" alt="">
+    <h2>Tokenization</h2>
+    <p>Pada tahap ini dilakukan pemotongan kata menjadi potongan tunggal. Pemotongan kata dilakukan terhadap kata yang dipisah oleh spasi. Kemudian kata-kata yang sudah dipisahkan dimasuukkan kedalam array </p>
+    <img src="static/assets/4.png" alt="">
+{% endblock %}
